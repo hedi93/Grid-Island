@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="grid-island.css"/>
+		<title>Grid Island</title>
+		<style>
+			body{
+				font-family: "Segoe UI";
+				background: #f1f1f1;
+			}
+			h1{
+				font-weight: normal;
+				color: #2980b9;
+			}
+			h2{
+				color: #2980b9;
+			}
+			h3{
+				color: #2980b9;
+			}
+			h2, h3{
+				margin-bottom: 10px;
+				font-weight: normal;
+			}
+			p{
+				margin: 10px 0;
+			}
+			div{
+				border: 1px solid #2c3e50;
+				box-sizing: border-box;
+			}
+			.row{
+				border: none !important;
+				padding: 0 !important;
+				margin-bottom: 20px;
+			}
+			hr{
+				border: none;
+				background: #eee;
+				height: 1px;
+				margin: 35px 0;
+			}
+			.container{
+				border: 0 !important;
+				width: 70%;
+				margin: 0 auto;
+				padding: 10px 20px;
+				background: #fff;
+			}
+			.row div{
+				background: #ddd;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Grid Island</h1>
+			<h2>Basic grid layouts that allows you to build easily and make it responsive</h2>
+
+			<hr>
+
+			<h3>Three equal columns</h3>
+			<p>
+				Get three equal-width columns starting at desktops and scaling to large desktops. On mobile devices, tablets and below, the columns will automatically stack.
+			</p>
+			<div class="row">
+				<div class="col-4">Col-4</div>
+				<div class="col-4">Col-4</div>
+				<div class="col-4">Col-4</div>
+			</div>
+
+			<h3>Three unequal columns</h3>
+			<p>
+				Get three columns starting at desktops and scaling to large desktops of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.
+			</p>
+			<div class="row">
+				<div class="col-3">Col-3</div>
+				<div class="col-6">Col-6</div>
+				<div class="col-3">Col-3</div>
+			</div>
+
+			<div class="row">
+				<div class="col-8">Col-8</div>
+				<div class="col-2">Col-2</div>
+				<div class="col-2">Col-2</div>
+			</div>
+
+			<h3>Two columns</h3>
+			<p>
+				Get two columns starting at desktops and scaling to large desktops.
+			</p>
+			<div class="row">
+				<div class="col-8">Col-8</div>
+				<div class="col-4">Col-4</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">Col-10</div>
+				<div class="col-2">Col-2</div>
+			</div>
+
+			<h3>Twelve column</h3>
+			<p>
+				Even twelve columns are possible for desktops and scaling to large desktops.
+			</p>
+			<div class="row">
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+				<div class="col-1">Col-1</div>
+			</div>
+
+			<h3>Full width, single columns</h3>
+			<p>
+				No grid classes are necessary for full-width elements.
+			</p>
+			<div class="row">
+				<div class="col-12">Col-12</div>
+			</div>
+
+			<hr>
+
+			<h2>How to use this ?</h2>
+			<p>
+				Simple and efficient, all you need is to create a division that has the class "row" and within you create your divisions with a class in format "col-x" and the sum must be 12
+			</p>
+			<p>
+				Eg: col-6, col-2, col-4 &rarr; 6 + 2 + 4 = 12
+			</p>
+			<p>
+				The rest of the style is for you to create it (margin, padding, ...), you are free to do what ever you want.
+			</p>
+
+			<hr>
+
+			<h2>For mobiles and tablets</h2>
+			<p>
+				The Grid island grid system has two tiers of classes: m (tablets), l (large screen). You can use nearly any combination of these classes to create more dynamic and flexible layouts.
+			</p>
+			<p>
+				Each tier of classes scales up, meaning if you plan on setting the same widths for m and l, you only need to specify m.
+			</p>
+			<p>
+				<em>Resize your viewport or check it out on your phone for an example.</em> 
+			</p>
+			<div class="row">
+				<div class="col-4 col-l-6 col-m-2">Col-4 Col-l-6 Col-m-2</div>
+				<div class="col-4 col-l-4 col-m-2">Col-4 Col-l-4 Col-m-2</div>
+				<div class="col-4 col-l-2 col-m-8">Col-4 Col-l-2 Col-m-8</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-l-8 col-m-4">Col-1 Col-l-8 Col-m-4</div>
+				<div class="col-12 col-l-2 col-m-4">Col-1 Col-l-2 Col-m-4</div>
+				<div class="col-12 col-l-2 col-m-4">Col-1 Col-l-2 Col-m-4</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-m-6 col-l-12">Col-12 Col-m-6 Col-l-12</div>
+				<div class="col-12 col-m-6 col-l-12">Col-12 Col-m-6 Col-l-12</div>
+			</div>
+
+			<hr>
+
+			<h2>Exceptions</h2>
+			<h3>Centering a division</h3>
+			<p>
+				Want to center somthing on large screen, use the "center" class.
+			</p>
+			<p>
+				<em>Resize your viewport or check it out on your phone for an example.</em> 
+			</p>
+			<div class="row">
+				<div class="col-12 col-m-6 col-l-center">Col-12 Col-s-6 Col-s-center</div>
+			</div>
+			<h3>Show and hide a division</h3>
+			<p>
+				Some division are supposed to be seen in small screen, or maybe the opposit... Use the "hide" and "show" class !
+			</p>
+			<p>
+				<em>Resize your viewport or check it out on your phone for an example.</em> 
+			</p>
+			<div class="row">
+				<div class="col-12 col-l-show col-m-show col-hide">Col-12 Col-l-show Col-m-show Col-m-hide</div>
+			</div>
+		</div>
+	</body>
+</html>
